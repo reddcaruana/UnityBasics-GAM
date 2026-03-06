@@ -41,6 +41,8 @@ public class Growth : MonoBehaviour
 
     public bool CanShrink()
     {
-        return currentSize > minSize;
+        // + 0.01f is to make sure currentSize
+        // meets this condition
+        return currentSize > minSize + 0.01f;
     }
 }
