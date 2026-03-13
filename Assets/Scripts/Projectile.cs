@@ -9,5 +9,6 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         myRigidbody.AddForce(transform.up * speed, ForceMode.Impulse);
+        Destroy(gameObject, 3f);
     }
 }
