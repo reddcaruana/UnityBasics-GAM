@@ -6,9 +6,12 @@ public class CoinCollector : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collided with " + other.name);
+        if (other.CompareTag("Coin"))
+        {
+            Debug.Log("Collided with " + other.name);
         
-        growth.Grow();
-        Destroy(other.gameObject);
+            growth.Grow();
+            Destroy(other.gameObject);
+        }
     }
 }
